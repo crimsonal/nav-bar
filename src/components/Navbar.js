@@ -28,6 +28,10 @@ export default function Navbar() {
     const classes = useStyles()
     const small = useMediaQuery("(max-width:600px)")
     const full = useMediaQuery("(min-width:600px)")
-    
 
+    const [open, setOpen] = useState(false)
+
+    const handleClick = () => {
+        setOpen(!open)
+    }
 }
