@@ -34,4 +34,32 @@ export default function Navbar() {
     const handleClick = () => {
         setOpen(!open)
     }
+
+    return (
+        <div className={classes.root}>
+            <AppBar position="static">
+                <Toolbar variant="dense">
+                    {small && (
+                        <>
+                            <List>
+                                <ListItem button>
+                                    <Button 
+                                    onClick={handleClick}
+                                    >
+                                        <MenuIcon />
+                                        {open ? (
+                                            <ExpandLess />
+                                        ) : (
+                                            <ExpandMore />
+                                        )}
+                                    </Button>
+                                </ListItem>
+                                
+                            </List>
+                        </>
+                    )}
+                </Toolbar>
+            </AppBar>
+        </div>
+    )
 }
